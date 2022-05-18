@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+  <meta name="description" content="проект русские путешествия(Mesto)">
+  <meta name="keywords" content="html, css, javascript">
+  <meta name="author" content="Andrei Kovzik">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <img src="./images/Vector.svg" alt="" class="header__logo">
+    </header>
+    <main class="content">
+      <section class="profile">
+          <img src="./images/Avatar.png" alt="" class="profile__avatar">
+          <div class="profile__info">
+            <div class="profile__title">
+              <h3 class="profile__name">Жак-Ив Кусто</h3>
+              <button type="button" class="profile__button"></button>
+            </div>
+            <p class="profile__subtitle">Исследователь океана</p>
+          </div>
+          <button type="button" class="profile__add-btn"></button>
+      </section>
+      <section class="elements">
+        <div class="element">
+          <img src="./images/karachevsk.png" alt="фото карачевска" class="element__image">
+          <div class="element__inf">
+            <p class="element__title">Карачаевск</p>
+            <button type="button" class="element__group"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/elbrus.png" alt="фото карачевска" class="element__image">
+          <div class="element__inf">
+            <p class="element__title">Гора Эльбрус</p>
+            <button type="button" class="element__group"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/dombai.png" alt="фото карачевска" class="element__image">
+          <div class="element__inf">
+            <p class="element__title">Домбай</p>
+            <button type="button" class="element__group"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/vony-razom-21qs61enZG8-unsplash.jpg" alt="фото карачевска" class="element__image">
+          <div class="element__inf">
+            <p class="element__title">Шри-Ланка</p>
+            <button type="button" class="element__group"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/talchiv-anatol-0mqZLgkiK7U-unsplash.jpg" alt="фото карачевска" class="element__image">
+          <div class="element__inf">
+            <p class="element__title">Париж, центр города</p>
+            <button type="button" class="element__group"></button>
+          </div>
+        </div>
+        <div class="element">
+          <img src="./images/ivan-rohovchenko-ggSYQO1jq1o-unsplash.jpg" alt="фото карачевска" class="element__image">
+          <div class="element__inf">
+            <p class="element__title">Нидерланды</p>
+            <button type="button" class="element__group"></button>
+          </div>
+        </div>
+      </section>
+      <section class="edit">
+        <div class="edit__form">
+          <h3 class="edit__title">Редактировать профиль</h3>
+          <button class="edit__close-btn" type="button"></button>
+          <form action="#" class="edit__form-ch">
+            <input class="edit__input edit__input-name" type="text" name="Имя" placeholder="Имя">
+            <input class="edit__input edit__input-job" type="text" name="Должность" placeholder="Должность">
+            <button class="edit__form-submit" type="submit">Сохранить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2022 Mesto Russia</p>
+    </footer>
+  </div>
+  <script src="./script/script.js"></script>
+</body>
+</html>

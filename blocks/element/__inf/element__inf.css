@@ -1,0 +1,15 @@
+﻿.element__inf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 15px 31px 21px;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    max-width: 320px;
+    min-height: 58px;
+    padding-top: 28px;
+  }
+}
+
