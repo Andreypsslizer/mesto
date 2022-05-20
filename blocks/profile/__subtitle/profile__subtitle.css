@@ -11,10 +11,17 @@
   max-width: 622px;
 }
 
+@media screen and (max-width: 850px) {
+  .profile__subtitle {
+    max-width: 440px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .profile__subtitle {
     max-width: 250px;
     font-size: 14px;
     line-height: 17px;
+    margin-top: 11px;
   }
 }
