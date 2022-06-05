@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,62 +10,61 @@
   <meta name="keywords" content="html, css, javascript">
   <meta name="author" content="Andrei Kovzik">
 </head>
-<body>
-  <div class="page">
-    <header class="header">
-      <img src="./images/Vector.svg" alt="" class="header__logo">
-    </header>
-    <main class="content">
-      <section class="profile">
-          <img src="./images/Avatar.png" alt="" class="profile__avatar">
-          <div class="profile__info">
-            <div class="profile__title">
-              <h1 class="profile__name">Жак-Ив Кусто</h1>
-              <button type="button" class="profile__button"></button>
-            </div>
-            <p class="profile__subtitle">Исследователь океана</p>
-          </div>
-          <button type="button" class="profile__add-btn"></button>
-      </section>
-      <section class="elements">
-        <ul class="elements__list">
-          
-        </ul>
-      </section>
-    </main>
-    <footer class="footer">
-      <p class="footer__copyright">© 2022 Mesto Russia</p>
-    </footer>
-    <section class="edit">
-      <div class="edit__form">
-        <h3 class="edit__title">Редактировать профиль</h3>
-        <button class="edit__close-btn" type="button"></button>
-        <form action="#" name="popup" class="edit__form-ch">
-          <input class="edit__input edit__input-name" type="text" name="Имя" placeholder="Имя">
-          <input class="edit__input edit__input-job" type="text" name="Должность" placeholder="Должность">
-          <button class="edit__form-submit" type="submit">Сохранить</button>
-        </form>
+
+<body class="page">
+  <header class="header">
+    <img src="./images/Vector.svg" alt="" class="header__logo">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img src="./images/Avatar.png" alt="" class="profile__avatar">
+      <div class="profile__info">
+        <div class="profile__title">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="profile__button"></button>
+        </div>
+        <p class="profile__subtitle">Исследователь океана</p>
       </div>
+      <button type="button" class="profile__add-btn"></button>
     </section>
-    <section class="new-item">
-      <div class="new-item__form">
-        <h3 class="new-item__title">Новое место</h3>
-        <button class="new-item__close-btn" type="button"></button>
-        <form action="#" name="popup" class="new-item__form-ch">
-          <input class="new-item__input new-item__input-name" type="text" name="Название" placeholder="Название">
-          <input class="new-item__input new-item__input-link" type="text" name="Ссылка" placeholder="Ссылка на картинку">
-          <button class="new-item__form-submit" type="submit">Создать</button>
-        </form>
-      </div>
+    <section class="elements">
+      <ul class="elements__list">
+
+      </ul>
     </section>
-    <section class="image-popup">
-      <div class="element_big">
-        <button class="element__close-btn" type="button"></button>
-        <img class="element__image_big">
-        <h3 class="element__title_big"></h3>
-      </div>
-    </section>
-  </div>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">© 2022 Mesto Russia</p>
+  </footer>
+  <section class="edit">
+    <div class="edit__form">
+      <h3 class="edit__title">Редактировать профиль</h3>
+      <button class="edit__close-btn" type="button"></button>
+      <form action="#" name="popup" class="edit__form-ch">
+        <input class="edit__input edit__input-name" type="text" name="Имя" placeholder="Имя">
+        <input class="edit__input edit__input-job" type="text" name="Должность" placeholder="Должность">
+        <button class="edit__form-submit" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </section>
+  <section class="new-item">
+    <div class="new-item__form">
+      <h3 class="new-item__title">Новое место</h3>
+      <button class="new-item__close-btn" type="button"></button>
+      <form action="#" name="popup" class="new-item__form-ch">
+        <input class="new-item__input new-item__input-name" type="text" name="Название" placeholder="Название">
+        <input class="new-item__input new-item__input-link" type="text" name="Ссылка" placeholder="Ссылка на картинку">
+        <button class="new-item__form-submit" type="submit">Создать</button>
+      </form>
+    </div>
+  </section>
+  <section class="image-popup">
+    <div class="element_big">
+      <button class="element__close-btn" type="button"></button>
+      <img class="element__image_big">
+      <h3 class="element__title_big"></h3>
+    </div>
+  </section>
   <template id="el-template">
     <li class="element">
       <button class="element__trash"></button>
@@ -77,4 +77,5 @@
   </template>
   <script src="./script/index.js"></script>
 </body>
+
 </html>
