@@ -1,4 +1,5 @@
 ﻿.element__image {
   min-height: 282px;
   max-height: 282px;
+  z-index: 0;
 }
