@@ -16,7 +16,7 @@ const bigImage = document.querySelector('.element-image-popup');
 const elementToTrash = container.querySelectorAll('.element__trash');
 const elementTemplate = document.querySelector('#el-template').content;
 const elementOn = container.querySelector('.elements__list');
-const imageCloser = bigImage.querySelector('.element__close-btn');
+const imageCloser = bigImage.querySelector('.element-image-popup__close-btn');
 const newItemForm = newItem.querySelector('.new-item__form');
 const newItemName = newItem.querySelector('.new-item__input-name');
 const newItemLink = newItem.querySelector('.new-item__input-link');
@@ -62,8 +62,8 @@ initialCards.forEach((el) => {
   });
   cardElement.querySelector('.element__image').addEventListener('click', function(evt) {
     bigImage.classList.add('image-popup_opened');
-    bigImage.querySelector('.element__image_big').src = evt.target.src;
-    bigImage.querySelector('.element__title_big').textContent = cardElement.querySelector('.element__title').textContent;
+    bigImage.querySelector('.element-image-popup__image_big').src = evt.target.src;
+    bigImage.querySelector('.element-image-popup__title_big').textContent = cardElement.querySelector('.element__title').textContent;
   })
 }); 
 
@@ -112,7 +112,7 @@ newItemForm.addEventListener('submit', function (evt) {
   });
   cardElement.querySelector('.element__image').addEventListener('click', function(evt) {
     bigImage.classList.add('image-popup_opened');
-    bigImage.querySelector('.element__image_big').src = evt.target.src;
-    bigImage.querySelector('.element__title_big').textContent = cardElement.querySelector('.element__title').textContent;
+    bigImage.querySelector('.element-image-popup__image_big').src = evt.target.src;
+    bigImage.querySelector('.element-image-popup__title_big').textContent = cardElement.querySelector('.element__title').textContent;
   })
 });

@@ -1,4 +1,4 @@
-.new-item__close-btn {
+.element-image-popup__close-btn {
     background-image: url(../../../images/Close\ Icon.svg);
     position: absolute;
     width: 32px;
@@ -15,7 +15,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .new-item__close-btn {
+    .element-image-popup__close-btn {
         width: 20px;
         height: 20px;
         right: 0;
