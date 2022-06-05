@@ -1,0 +1,9 @@
+.element__trash {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    transition: opacity .3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

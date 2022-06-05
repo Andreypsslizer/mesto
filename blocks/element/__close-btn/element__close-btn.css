@@ -1,0 +1,23 @@
+.new-item__close-btn {
+    background-image: url(../../../images/Close\ Icon.svg);
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .new-item__close-btn {
+        width: 20px;
+        height: 20px;
+        right: 0;
+    }
+}
