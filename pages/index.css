@@ -39,8 +39,8 @@
 @import url(../blocks/new-item/__form-submit/edit__form-submit.css);
 @import url(../blocks/new-item/__close-btn/edit__close-btn.css);
 @import url(../blocks/element/__trash/element__trash.css);
-@import url(../blocks/image-popup/image-popup.css);
-@import url(../blocks/image-popup/_opened/image-popup_opened.css);
+@import url(../blocks/element-image-popup/element-image-popup.css);
+@import url(../blocks/element-image-popup/_opened/image-popup_opened.css);
 @import url(../blocks/element/_big/element_big.css);
 @import url(../blocks/element/__image/_big/element__image_big.css);
 @import url(../blocks/element/__title/_big/element__title_big.css);
