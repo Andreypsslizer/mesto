@@ -11,6 +11,11 @@
     background-color: transparent;
     width: 18px;
     height: 18px;
-    cursor: pointer;
     z-index: 1;
+    transition: opacity .3s ease;
+}
+
+.element__trash:hover {
+  opacity: .6;
+  cursor: pointer;
 }

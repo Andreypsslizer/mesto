@@ -2,4 +2,10 @@
   min-height: 282px;
   max-height: 282px;
   z-index: 0;
+  transition: opacity .3s ease;
+}
+
+.element__image:hover {
+  opacity: .6;
+  cursor: pointer;
 }
