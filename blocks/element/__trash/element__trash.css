@@ -1,7 +1,6 @@
 .element__trash {
     padding: 0;
     border: none;
-    transition: opacity .3s ease;
     position: absolute;
     background-image: url(../../../images/Trash.svg);
     top: 20px;
