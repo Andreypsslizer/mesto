@@ -9,7 +9,6 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    transition: background-color .3s ease;
     margin-top: 48px;
     transition: opacity .3s ease;
 }
