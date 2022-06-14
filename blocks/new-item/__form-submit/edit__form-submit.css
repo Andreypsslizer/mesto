@@ -11,6 +11,12 @@
     cursor: pointer;
     transition: background-color .3s ease;
     margin-top: 48px;
+    transition: opacity .3s ease;
+}
+
+.new-item__form-submit:hover {
+  opacity: .6;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

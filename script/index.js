@@ -6,20 +6,22 @@ const popupCloser = document.querySelectorAll('.popup__close-btn');
 const author = profileContainer.querySelector('.profile__name');
 const job = profileContainer.querySelector('.profile__subtitle');
 const nameFormElement = profilePopup.querySelector('.edit__form');
-const nameInput = nameFormElement.querySelector('.edit__input-name');
-const jobInput = nameFormElement.querySelector('.edit__input-job');
 const picElement = container.querySelector('.element');
 const newItemButton = profileContainer.querySelector('.profile__add-btn');
 const cardPopup = document.querySelector('.new-item');
 const imagePopup = document.querySelector('.element-image-popup');
 const newItemForm = cardPopup.querySelector('.new-item__form');
-const newItemFormElement = cardPopup.querySelector('.new-item__form-ch');
-const newItemName = cardPopup.querySelector('.new-item__input-name');
-const newItemLink = cardPopup.querySelector('.new-item__input-link');
+const editFormElement = document.forms.form1;
+const newItemFormElement = document.forms.form2;
+const nameInput = form1.elements.name;
+const jobInput = form1.elements.job;
+const newItemName = form2.elements.name;
+const newItemLink = form2.elements.link;
 const imageBig = imagePopup.querySelector('.element-image-popup__image');
 const imageBigTitle = imagePopup.querySelector('.element-image-popup__title');
 const elementOn = document.querySelector('.elements__list');
 const elementTemplate = document.querySelector('#el-template').content;
+const popopOpened = document.querySelectorAll('.popup');
 
 
 const initialCards = [
@@ -90,6 +92,19 @@ popupCloser.forEach(button => {
   const popup = button.closest('.popup');
   button.addEventListener('click', (e) => {
       closePopup(popup)
+  });
+})
+
+popopOpened.forEach(el => {
+  el.addEventListener('mousedown', function(evt){
+    if(evt.target.classList.contains('popup_opened')){
+        closePopup(el);
+    }
+  });
+  document.addEventListener('keydown', function(evt){ 
+    if (evt.key === "Escape"){
+      closePopup(el);
+    }
   });
 })
 
