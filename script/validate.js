@@ -35,10 +35,6 @@ const showInputError = (formElement, inputElement, errorMessage, inputErrorClass
   const enableValidation = ({formSelector, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass}) => {
     const formList = Array.from(document.querySelectorAll(formSelector));
     formList.forEach((formElement) => {
-        formElement.addEventListener('submit', function (evt) {
-          evt.preventDefault();
-        });
-    
         setEventListeners(formElement, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass);
       });
   };
@@ -52,8 +48,10 @@ const showInputError = (formElement, inputElement, errorMessage, inputErrorClass
   function toggleButtonState(inputList, buttonElement, inactiveButtonClass) {
     if(hasInvalidInput(inputList)) {
       buttonElement.classList.add(inactiveButtonClass)
+      buttonElement.disabled = true;
     } else {
       buttonElement.classList.remove(inactiveButtonClass)
+      buttonElement.disabled = false;
     };
   }
 
