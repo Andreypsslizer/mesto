@@ -108,5 +108,6 @@ newItemForm.addEventListener('submit', function (evt) {
   elementOn.prepend(renderCard(newItemName.value, newItemLink.value));
   newItemFormElement.reset();
   newItemFormButton.classList.add('popup__button_disabled');
+  newItemFormButton.disabled = true;
   closePopup(cardPopup);
 });
