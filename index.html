@@ -44,11 +44,11 @@
         <label class="popup__label">
           <input id="name-input" class="popup__input edit__input-name" type="text" name="name" placeholder="Имя"
             minlength="2" maxlength="40" required>
-          <span class="name-input-error"></span>
+          <span class="popup__error name-input-error"></span>
         </label>
         <label class="popup__label"><input id="job-input" class="popup__input edit__input-job" type="text" name="job"
             placeholder="Должность" minlength="2" maxlength="200" required>
-          <span class="job-input-error"></span>
+          <span class="popup__error job-input-error"></span>
         </label>
         <button class="edit__form-submit popup__button" type="submit">Сохранить</button>
       </form>
@@ -62,11 +62,11 @@
         <label class="popup__label">
           <input id="title-input" class="popup__input new-item__input-name" type="text" name="name"
             placeholder="Название" minlength="2" maxlength="30" required>
-          <span class="title-input-error"></span>
+          <span class="popup__error title-input-error"></span>
         </label>
         <label class="popup__label"><input id="link-input" class="popup__input new-item__input-link" type="url"
             name="link" placeholder="Ссылка на картинку" required>
-          <span class="link-input-error"></span>
+          <span class="popup__error link-input-error"></span>
         </label>
         <button class="new-item__form-submit popup__button" type="submit">Создать</button>
       </form>
@@ -89,9 +89,9 @@
       </div>
     </li>
   </template>
-  <script src="./script/cards.js"></script>
-  <script src="./script/index.js"></script>
-  <script src="./script/validate.js"></script>
+  <script type="module" src="./script/index.js"></script>
+  <script type="module" src="./script/cards.js"></script>
+  <script type="module" src="./script/validate.js"></script>
 </body>
 
 </html>
