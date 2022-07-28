@@ -65,15 +65,8 @@ export default class FormValidator {
   }
 
   removeErrors = () => {
-    const textErrors = document.querySelectorAll('.popup__error')
-    const inputErrors = document.querySelectorAll('.popup__input_type_error')
-    textErrors.forEach(el => {
-        el.classList.remove('popup__error_visible')
-        el.textContent = ''
-    })
-    inputErrors.forEach(el => {
-        el.classList.remove('popup__input_type_error')
-    })
+    this._inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement)
+    });
   }
 }
-
