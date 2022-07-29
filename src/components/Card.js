@@ -38,7 +38,7 @@ export default class Card {
     this._element.querySelector('.element__trash').addEventListener('click', () => {
       this._handleRemoving();
     })
-    this._element.querySelector('.element__image').addEventListener('click', () => {
+    this._cardImage.addEventListener('click', () => {
       this.handleClickCard(this._name, this._link);
     })
   }

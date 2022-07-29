@@ -1,18 +1,20 @@
-import './pages/index.css'
-import Card from '../src/components/Card.js'
-import FormValidator from './components/FormValidator.js';
-import {initialCards, validConfig} from './utils/constants.js'
-import Section from './components/Section.js';
-import Popup from "./components/Popup.js";
-import PopupWithImage from "../src/components/PopupWithImage.js"
-import UserInfo from './components/UserInfo.js';
-import PopupWithForm from './components/PopupWithForm.js';
+import './index.css'
+import Card from '../components/Card.js'
+import FormValidator from '../components/FormValidator.js';
+import {initialCards, validConfig} from '../utils/constants.js'
+import Section from '../components/Section.js';
+import Popup from "../components/Popup.js";
+import PopupWithImage from "../components/PopupWithImage.js"
+import UserInfo from '../components/UserInfo.js';
+import PopupWithForm from '../components/PopupWithForm.js';
 const container = document.querySelector('.content');
 const profileContainer = container.querySelector('.profile');
 const buttonEdit = profileContainer.querySelector('.profile__button');
 const newItemButton = profileContainer.querySelector('.profile__add-btn');
 const editFormElement = document.forms.profile;
 const newItemFormElement = document.forms.card;
+const nameInput = profile.elements.name; 
+const jobInput = profile.elements.job; 
 
 const createCard = (data, selector) => {
   const card = new Card(data, selector, {handleClickCard: (name, link) => {bigImagePopup.open(name, link)}});
@@ -66,13 +68,15 @@ cardPopup.setEventListeners()
 
 buttonEdit.addEventListener('click', function () {
   profilePopup.open();
-  userInfo.getUserInfo()
-  profileFormValidation.removeErrors();
+  const {job, name} = userInfo.getUserInfo();
+  nameInput.value = name;
+  jobInput.value = job;
+  profileFormValidation.resetValidation();
 });
 
 newItemButton.addEventListener('click', function () {
   cardPopup.open();
-  cardFormValidation.removeErrors();
+  cardFormValidation.resetValidation();
 });
 
 
