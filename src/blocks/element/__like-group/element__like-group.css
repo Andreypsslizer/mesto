@@ -1,4 +1,4 @@
-﻿.element__group {
+﻿.element__like-group {
   background-image: url(../../../images/heart.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -7,9 +7,10 @@
   border: none;
   background-color: transparent;
   transition: opacity .3s ease;
+  margin-bottom: 3px;
 }
 
-.element__group:hover {
+.element__like-group:hover {
   opacity: .6;
   cursor: pointer;
 }
