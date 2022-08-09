@@ -86,15 +86,15 @@
     </div>
   </section>
   <section class="popup new-avatar">
-    <div class="new-item__form">
-      <h3 class="popup__title">Новый аватар</h3>
-      <button class="popup__close-btn" type="button"></button>
-      <form action="#" name="avatar" class="popup__form new-item__form-ch" novalidate>
-        <label class="popup__label"><input id="avatar-input" class="popup__input new-item__input-link" type="url"
+    <div class="new-avatar__form new-item__form">
+      <h3 class="popup__title new-avatar__form-title">Новый аватар</h3>
+      <button class="popup__close-btn new-avatar__form-closebtn" type="button"></button>
+      <form action="#" name="avatar" class="popup__form new-avatar__form-ch new-item__form-ch" novalidate>
+        <label class="popup__label new-avatar__form-label"><input id="avatar-input" class="popup__input new-item__input-link" type="url"
             name="link" placeholder="Ссылка на картинку" required>
-          <span class="popup__error avatar-input-error"></span>
+          <span class="popup__error new-avatar__form-error avatar-input-error"></span>
         </label>
-        <button class="new-item__form-submit popup__button popup__button_disabled" type="submit" disabled>Сохранить</button>
+        <button class="new-item__form-submit new-avatar__form-submit popup__button popup__button_disabled" type="submit" disabled>Сохранить</button>
       </form>
     </div>
   </section>
