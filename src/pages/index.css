@@ -13,6 +13,9 @@
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);
 @import url(../blocks/new-avatar/new-avatar.css);
+@import url(../blocks/new-avatar/__form-submit/new-avatar__form-submit.css);
+@import url(../blocks/new-avatar/__form/new-avatar__form.css);
+@import url(../blocks/new-avatar/__input/new-avatar__form-input-link.css);
 @import url(../blocks/element/__image/element__image.css);
 @import url(../blocks/element/__inf/element__inf.css);
 @import url(../blocks/element/__title/element__title.css);
