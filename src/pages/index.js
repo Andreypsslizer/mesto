@@ -18,7 +18,8 @@ const editFormElement = document.forms.profile;
 const newItemFormElement = document.forms.card;
 const avatarFormElement = document.forms.avatar;
 const nameInput = profile.elements.name; 
-const jobInput = profile.elements.job; 
+const jobInput = profile.elements.job;
+const userId = {};
 
 function addLike(card) {
   api.likeCardAdd(card.cardId)
@@ -37,7 +38,7 @@ function removeLike(card) {
 }
 
 const createCard = (data, selector) => {
-  const card = new Card(data, selector, 
+  const card = new Card(data, selector,
     {handleClickCard: (name, link) => {bigImagePopup.open(name, link)},
     handleGoDelete: () => {
       cardDeletion.open()
@@ -49,6 +50,7 @@ const createCard = (data, selector) => {
         removeLike(card)
       }
     },
+    currentUserId: '801fc7475d7bc8336e586ad2'
     /* handleLikeCard: () => {
       const likedcarded = card.likes.map(elem => Object.values(elem)).flat().includes('801fc7475d7bc8336e586ad2')
       if (likedcarded) {
@@ -107,10 +109,12 @@ const profilePopup = new PopupWithForm({
   popup: '.edit',
   handleSubmit: values => {
     userInfo.setUserInfo(values.name, values.job)
-    api.setUser(values.name, values.job)
+    api.setUser(values.name, values.job).then(() => {
+      profilePopup.close()
+    })
     .catch(err => console.log(`Error: ${err}`))
     .finally(() => {
-      profilePopup.renderLoading(false)
+      profilePopup.renderLoading(false, 'Сохранить')
     })
   }
 });
@@ -121,10 +125,12 @@ const cardPopup = new PopupWithForm({
   handleSubmit: card => {
     api.addCard(card.name, card.link).then(cardItem => {
       cardRender.renderer(cardItem, 'prepend')
+    }).then(() => {
+      cardPopup.close()
     })
     .catch(err => console.log(`Error: ${err}`))
     .finally(() => {
-      cardPopup.renderLoading(false)
+      cardPopup.renderLoading(false, 'Создать')
     })
   }
   
@@ -134,11 +140,13 @@ cardPopup.setEventListeners()
 const avatarPopup = new PopupWithForm({
   popup: '.new-avatar',
   handleSubmit: values => {
-    userInfo.setUserAvatar(values.link);
-    api.avatarChange(values.link)
+    api.avatarChange(values.link).then(() => {
+      userInfo.setUserAvatar(values.link);
+      avatarPopup.close()
+    })
     .catch(err => console.log(`Error: ${err}`))
     .finally(() => {
-      avatarPopup.renderLoading(false)
+      avatarPopup.renderLoading(false, 'Сохранить')
     })
   }
 });
@@ -199,8 +207,8 @@ const api = new Api({
 Promise.all([api.getUserInfo(), api.getInitialCards()])
   .then(([user, card]) => {
     cardRender.rendererItems(card);
-    userInfo.setUserInfo(user.name, user.about);
-    userInfo.setUserAvatar(user.avatar);
+    userInfo.setUserInfo(user.name, user.about, user.avatar);
+    userId.id = user._id;
   })
   .catch(err => console.log(`Error: ${err}`))
 

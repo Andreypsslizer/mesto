@@ -1,5 +1,5 @@
 export default class Card {
-  constructor(data, cardSelector, {handleClickCard, handleGoDelete, handleLikeCard}) {
+  constructor(data, cardSelector, {handleClickCard, handleGoDelete, handleLikeCard, currentUserId}) {
     this._name = data.name;
     this._link = data.link;
     this._cardSelector = cardSelector;
@@ -11,6 +11,7 @@ export default class Card {
     this.cardId = data._id;
     this.handleLikeCard = handleLikeCard;
     this.card = card;
+    this._userId = currentUserId;
   }
 
   _getTemplate() {
@@ -34,11 +35,11 @@ export default class Card {
     this._cardImage.alt = this._name;
     this._element.querySelector('.element__title').textContent = this._name;
     this._likeCounter.textContent = this.likes.length;
-    if (this._ownerId !== '801fc7475d7bc8336e586ad2') {
+    if (this._ownerId !== this._userId) {
       this._element.querySelector('.element__trash').remove()
     }
     this._data.likes.forEach(elem => {
-      if (elem._id === '801fc7475d7bc8336e586ad2') {
+      if (elem._id === this._userId) {
         this._likeButton.classList.toggle("element__group_active");
       }
     });
